@@ -1,9 +1,4 @@
----
-title: "Cyclistic Bike Study"
-author: theepeekaa
-date: "`r format(Sys.time(), '%d %B, %Y')`" 
-output: html_document
----
+# Cyclistic Bike Study
 
 ### About the company:
 In 2016, Cyclistic launched a successful bike-share oﬀering. Since then, the program has grown to a ﬂeet of 5,824 bicycles that are geotracked and locked into a network of 692 stations across Chicago. The bikes can be unlocked from one station and returned to any other station in the system anytime.
@@ -67,3 +62,4 @@ R for Data Cleaning and Tableau for Visualization
 * Price up 10 to 20 bucks than the usual price for the casual riders so that they may consider the annual membership and its benefits
 * Collaborate with the tiktok stars about the annual membership 
 
+~ [Theepeekaa](https://www.linkedin.com/in/theepeekaa-ramakrishnan-shanthi-4270aa1a3/)
