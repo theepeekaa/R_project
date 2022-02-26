@@ -1,6 +1,5 @@
 ---
 title: "Cyclistic Bike Study"
-layout: article
 author: theepeekaa
 date: "`r format(Sys.time(), '%d %B, %Y')`" 
 output: html_document
