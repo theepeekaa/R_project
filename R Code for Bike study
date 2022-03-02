@@ -1,0 +1,59 @@
+# Loading the packages
+library(tidyverse)
+library(lubridate)
+
+# Importing the data sets
+
+feb <- read_csv("202102-divvy-tripdata.csv")
+mar <- read_csv("202103-divvy-tripdata.csv")
+apr <- read_csv("202104-divvy-tripdata.csv")
+may <- read_csv("202105-divvy-tripdata.csv")
+june <- read_csv("202106-divvy-tripdata.csv")
+july <- read_csv("202107-divvy-tripdata.csv")
+aug <- read_csv("202108-divvy-tripdata.csv")
+sep <- read_csv("202109-divvy-tripdata.csv")
+oct <- read_csv("202110-divvy-tripdata.csv")
+nov <- read_csv("202111-divvy-tripdata.csv")
+dec <- read_csv("202112-divvy-tripdata.csv")
+jan <- read_csv("202201-divvy-tripdata.csv")
+
+# Data Cleaning - Eliminating unwanted columns for the further analysis
+
+feb <- feb %>% select(-c(start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng))
+mar <- mar %>% select(-c(start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng))
+apr <- apr %>% select(-c(start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng))
+may <- may %>% select(-c(start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng))
+june <- june %>% select(-c(start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng))
+july <- july %>% select(-c(start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng))
+aug <- aug %>% select(-c(start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng))
+sep <- sep %>% select(-c(start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng))
+oct <- oct %>% select(-c(start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng))
+nov <- nov %>% select(-c(start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng))
+dec <- dec %>% select(-c(start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng))
+jan <- jan %>% select(-c(start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng))
+
+# Combining all the data into one
+
+all_months <- bind_rows(feb, mar, apr, may, june, july, aug, sep, oct, nov, dec)
+
+# Formatting Date, Month and year
+
+all_months$date <- as.Date(all_months$started_at)
+all_months$month <- format(as.Date(all_months$date), "%m")
+all_months$day <- format(as.Date(all_months$date), "%d")
+all_months$year <- format(as.Date(all_months$date), "%Y")
+all_months$day_of_week <- format(as.Date(all_months$date), "%A")
+all_months$ride_length <- difftime(all_months$ended_at, all_months$started_at)
+
+# Calculate average ride length and Total no of rides
+
+all_months_v1 %>% group_by(member_casual) %>%  summarise(rides_count = n(),avg_duration = mean(ride_length))
+
+all_months_v1 %>% group_by(member_casual, rideable_type) %>%
+summarise(rides_count = n())
+
+
+# Exporting as CSV file
+write.csv(all_months_v1, "Bike_ride.csv")
+                                          
+```
