@@ -56,4 +56,3 @@ summarise(rides_count = n())
 # Exporting as CSV file
 write.csv(all_months_v1, "Bike_ride.csv")
                                           
-```
