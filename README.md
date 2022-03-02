@@ -15,9 +15,17 @@ You are a junior data analyst working in the marketing analyst team at Cyclistic
 ### Business Task:(ASK)
 1.	How do annual members and casual riders use Cyclistic bikes differently?
 
+### Data Set: 
+
+The last tweleve months data: https://divvy-tripdata.s3.amazonaws.com/index.html
+
+Downloaded the data from Feb 2021 to Jan 2022
+
+As the data size is huge, I used R for data cleaning
+
 ### Tools used:
 
-R for Data Cleaning and Tableau for Visualization
+R for Data Cleaning and Tableau for Visualization 
 
 ### Prepare and Process:
 
