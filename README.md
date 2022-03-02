@@ -29,10 +29,11 @@ R for Data Cleaning and Tableau for Visualization
 
 ### Prepare and Process:
 
-* Install the tidyverse, lubridate and ggplot2 packages for data cleaning
+* Install the tidyverse, lubridate packages for data cleaning
 * Import the last 12 months [data set](https://divvy-tripdata.s3.amazonaws.com/index.html)
 * Data cleaning and Combining to a Single data set
 * Adding new columns required for the analysis - Ride length, Date, Month, Year, and Week of the day, mean of the ride_length by months, max of ride_length by months
+* R code - [Bike Study](https://github.com/theepeekaa/R_project/blob/main/R%20Code%20for%20Bike%20study)
 
 ### Analyze:
 
