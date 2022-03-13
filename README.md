@@ -57,7 +57,7 @@ R for Data Cleaning and Tableau for Visualization
 #### Average Ride length by Members/Casual and month:
 <img width="661" alt="image" src="https://user-images.githubusercontent.com/84039199/155822028-a8812220-7900-4bfb-9a61-57380af5ae03.png">
 
-
+### Share & Act:
 ### Key Findings:
 
 * Annual members has more rides compared to the casual riders
